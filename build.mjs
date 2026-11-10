@@ -214,6 +214,8 @@ write("404.html", layout({ path: "/404", md: false, title: "Page not found | Ano
 // ---------- robots.txt (explicitly welcomes search + AI answer engines) ----------
 write("robots.txt", `# ${site.name}
 User-agent: *
+# Content Signals (contentsignals.org): OK to use these pages for search, AI answers and AI training
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /404.html
 # Markdown twins are for AI readers; keep them out of the search index (GitHub Pages can't send X-Robots-Tag)
